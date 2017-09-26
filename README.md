@@ -24,6 +24,8 @@ dependencies {
 
 ## Usage
 
+in your MainActivity.java
+
 ```java
 import com.ybs.passwordstrengthchecker.PwdStrength.PasswordStrength;
 
@@ -82,4 +84,71 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     }
 }
 ```
+in your activity_main.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20sp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Password Meter"
+        android:gravity="center_horizontal"
+        android:paddingTop="25sp"
+        android:paddingBottom="20sp"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:hint="Enter Password"
+        android:clickable="true"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:id="@+id/login_password"
+        android:padding="10dp"
+        android:background="@null"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:maxHeight="20dip"
+            android:minHeight="20dip"
+            android:layout_weight="1"
+            android:progress="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Weak"
+            android:id="@+id/password_strength" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_instructions"
+        android:text="Your password must be at least 8 characters. With at least 1 number and 1 special character" />
+</LinearLayout>
+```
+in your values/strings.xml
+
+```xml
+<resources>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very Strong</string>
+</resources>
+```
+
 Done ;)
