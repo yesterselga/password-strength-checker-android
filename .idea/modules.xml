@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PasswordStrengthChecker.iml" filepath="$PROJECT_DIR$/PasswordStrengthChecker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/password-strength-meter/password-strength-meter.iml" filepath="$PROJECT_DIR$/password-strength-meter/password-strength-meter.iml" />
+    </modules>
+  </component>
+</project>

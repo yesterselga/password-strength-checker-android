@@ -1,6 +1,5 @@
 package com.ybs.passwordstrengthchecker;
 
-import java.text.MessageFormat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,28 +8,15 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ybs.passwordstrengthchecker.PwdStrength.PasswordStrength;
 
 public class MainActivity extends AppCompatActivity implements TextWatcher {
 
-    /** Dialog Id for resetting password. */
-    private static final int DIALOG_RESET_PASSWORD = 1;
-    /** Tag for logging purposes. */
-    public static final String LOG_TAG = "LoginActivity";
-
-    private boolean isFirstRun;
-    private boolean isValidatingPassword;
-    private String passwordString;
-    private Toast toast;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         EditText password = (EditText)findViewById(R.id.login_password);
         password.addTextChangedListener(this);
